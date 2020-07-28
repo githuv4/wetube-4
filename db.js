@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-mongoose.connect("mongodb://localhost:27017/wetube-4", {
+mongoose.connect(process.env.MONGO_URL_4, {
   useNewUrlParser: true,
   useFindAndModify: false,
 });
